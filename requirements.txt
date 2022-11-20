@@ -1,0 +1,8 @@
+transformers
+torch
+tweepy
+wordcloud
+matplotlib
+pandas
+Flask
+jinja2
