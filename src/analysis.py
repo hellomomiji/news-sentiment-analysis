@@ -43,7 +43,9 @@ def generateGraph(sentiments_counts):
     # visualize the sentiments
     fig = plt.figure(figsize=(6,6), dpi=100)
     ax = plt.subplot(111)
-    df.plot.pie(ax=ax, autopct='%1.1f%%', startangle=270, fontsize=12, label="", y='count')
+    labels = df['sentiment'].values.tolist()
+    print(labels)
+    df.plot.pie(ax=ax, autopct='%1.1f%%', startangle=270, fontsize=12, labels=labels, y="count")
     graph_path = 'static/img/graph.png'
     plt.savefig(graph_path)
     plt.close()
