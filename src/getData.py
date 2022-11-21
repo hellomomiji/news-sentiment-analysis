@@ -2,11 +2,12 @@
 import json
 import requests
 from datetime import date, timedelta
+from src.get_api_key import getTwitterToken, getNewsApiKey # ignore when push to public
 
 
 def getTweets(keyword):
   # Authentication 
-  bearer_token = 'AAAAAAAAAAAAAAAAAAAAAPC3jAEAAAAAlfohKzVAUpkPrPYyUnsp9P5BNQE%3D4dTdbGWEW04ksJ653bieS37UwKOeZGRGe3Ib5Z6hcyhJjQDaFh'
+  bearer_token = getTwitterToken() # change to your token
   client = tweepy.Client(bearer_token)
 
   # Query tweets from twitter by Tweepy
@@ -19,7 +20,7 @@ def getTweets(keyword):
   return data
   
 def getNews(keyword):
-  apikey = '6877008d158c42fea587ed433ffb244c'
+  apikey = getNewsApiKey() # change to your api key
   url = ('https://newsapi.org/v2/everything?q=' + keyword 
          + '&language=en&from=' + str(date.today() - timedelta(days=3))  
          + "&to=" + str(date.today()) + '&sortBy=popularity&apiKey=' + apikey)
@@ -40,7 +41,7 @@ def getNews(keyword):
   return data
 
 def getHeadlines():
-  apikey = '6877008d158c42fea587ed433ffb244c'
+  apikey = getNewsApiKey() #change to your api key
   url ='https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apikey
   response = requests.get(url)
   articles = response.json()['articles']

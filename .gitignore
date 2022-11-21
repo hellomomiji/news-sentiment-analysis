@@ -10,3 +10,4 @@ fig/*
 **/.DS_Store
 .coverage
 test.py
+src/get_api_key.py
