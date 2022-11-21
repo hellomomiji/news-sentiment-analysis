@@ -27,7 +27,14 @@ def getNews(keyword):
 
   response = requests.get(url)
   articles = response.json()['articles']
-  data = [(str(article['title'] + " | " + article['description']), article['url']) for article in articles]
+  data = []
+  for article in articles:
+    text = article['title']
+    if article['description'] != None:
+      text += " | " + article['description'] 
+    if article['content'] != None:
+      text += " | " + article['content']
+    data.append((text, article['url']))
   print("Called everything API, data length:" + str(len(data)))
   print(data[0])
   return data
