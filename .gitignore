@@ -11,3 +11,5 @@ fig/*
 .coverage
 test.py
 src/get_api_key.py
+Procfile
+Procfile.windows
