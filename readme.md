@@ -1,10 +1,12 @@
 # Intro 
 A news sentiment Analysis app constructed by flask.
 
-![Screenshot 2022-11-22 at 2 11 05 PM](https://user-images.githubusercontent.com/38517716/203431783-d9f79dba-9bd2-409a-92ba-b33a1971dc5f.png)
+![news Headlines](https://user-images.githubusercontent.com/38517716/203431783-d9f79dba-9bd2-409a-92ba-b33a1971dc5f.png)
+
 (Example: get sentiemnt analysis of today's news headlines.)
 
-![Screenshot 2022-11-22 at 2 11 28 PM](https://user-images.githubusercontent.com/38517716/203431844-73c1c25e-26d8-49a9-b07c-20be1d3ae9cc.png)
+![keyword search](https://user-images.githubusercontent.com/38517716/203431844-73c1c25e-26d8-49a9-b07c-20be1d3ae9cc.png)
+
 (Example: get sentiment analysis by keyword "Elon Musk".)
 
 # Get Started
