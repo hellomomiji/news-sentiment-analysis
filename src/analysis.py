@@ -26,7 +26,7 @@ def sentimentAnalysis(data):
 def generateWordCloud(data, keyword):
   # Wordcloud with news
   words = data
-  stop_words = ["https", "co", "RT","...", "|", "BBC", "CNN", "Reuters", keyword] + list(STOPWORDS)
+  stop_words = ["https", "co", "RT","...", "|", "BBC", "CNN", "Reuters", keyword, "chars"] + list(STOPWORDS)
   wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white", stopwords = stop_words).generate(str(words))
   plt.figure()
   plt.title(keyword + " Wordcloud")

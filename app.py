@@ -1,3 +1,4 @@
+from datetime import date, timedelta
 from flask import Flask, request,render_template
 from src.getData import getTweets,getNews, getHeadlines
 from src.analysis import sentimentAnalysis, generateWordCloud, generateGraph, getImgPath, getGraphPath
@@ -24,7 +25,15 @@ def index():
         
         img_path = getImgPath()
         graph_path = getGraphPath()
-        return render_template('index.html', img_path=img_path, graph_path=graph_path, results=results, samples=samples, keyword=keyword, number=len(data))
+        return render_template('index.html', 
+                               img_path=img_path, 
+                               graph_path=graph_path, 
+                               results=results, 
+                               samples=samples, 
+                               keyword=keyword, 
+                               number=len(data),
+                               today = date.today().strftime("%a %d-%m-%y"),
+                               threeDaysBefore = (date.today()-timedelta(days=3)).strftime("%a %d-%m-%y"))
     
 
 if __name__ == '__main__':
