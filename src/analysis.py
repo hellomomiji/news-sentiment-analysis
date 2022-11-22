@@ -1,4 +1,3 @@
-import os
 import collections
 from transformers import pipeline
 import pandas as pd

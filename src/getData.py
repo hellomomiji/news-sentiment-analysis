@@ -6,17 +6,17 @@ from src.get_api_key import getTwitterToken, getNewsApiKey # ignore when push to
 
 
 def getTweets(keyword):
-  # Authentication 
-  bearer_token = getTwitterToken() # change to your token
-  client = tweepy.Client(bearer_token)
+  # # Authentication 
+  # bearer_token = getTwitterToken() # change to your token
+  # client = tweepy.Client(bearer_token)
 
-  # Query tweets from twitter by Tweepy
-  query = keyword
-  res = client.search_recent_tweets(query, max_results=100)
-  print(res.meta)
+  # # Query tweets from twitter by Tweepy
+  # query = keyword
+  # res = client.search_recent_tweets(query, max_results=100)
+  # print(res.meta)
   data = []
-  for tweet in res.data:
-    data.append(tweet.text)
+  # for tweet in res.data:
+  #   data.append(tweet.text)
   return data
   
 def getNews(keyword):
