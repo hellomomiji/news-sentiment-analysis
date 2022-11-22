@@ -1,9 +1,16 @@
+# Intro 
+A news sentiment Analysis app constructed by flask.
+
+![Image](https://user-images.githubusercontent.com/38517716/203186883-a7d1da68-c376-4a37-bcd3-f6c19178b743.png)
+(Example: get sentiment analysis by keyword "Elon Musk")
+
 # Get Started
 
-## To run this app in VS Code
+## To run this app in your local server.
 (Reference: [Flask Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-flask)).
 
 1. Prerequisites
+
    - python3 and python extension installed.
 
 2. Create project environment for the Flask
