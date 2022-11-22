@@ -30,7 +30,5 @@ A news sentiment Analysis app constructed by flask.
     .venv\scripts\activate
     ```
 3. Install dependencies `pip3 install -r requirements.txt`.
-4. 
-5. Change api key to your own api key in `src/getData.py `.
-6. 
-7. `flask run` or `python3 app.py`(debug on) to run the app on your local server.
+4. Change api key to your own api key in `src/getData.py `.
+5. `flask run` or `python3 app.py`(debug on) to run the app on your local server.
