@@ -24,4 +24,4 @@
     ```
 3. Install dependencies `pip3 install -r requirements.txt`.
    
-4. `flask run` to run the app on your local server.
+4. `flask run` or `python3 app,py`(debug on) to run the app on your local server.
